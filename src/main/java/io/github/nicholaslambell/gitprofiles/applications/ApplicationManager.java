@@ -4,11 +4,10 @@ import io.github.nicholaslambell.gitprofiles.enums.ApplicationMode;
 
 public class ApplicationManager {
     private final IApplication _application;
-    private final ApplicationMode _applicationMode;
 
     public ApplicationManager(String[] args) {
-        _applicationMode = detectApplicationMode(args);
-        _application = initializeApplication(_applicationMode, args);
+        ApplicationMode applicationMode = detectApplicationMode(args);
+        _application = initializeApplication(applicationMode, args);
     }
 
     public void run() {
@@ -60,6 +59,6 @@ public class ApplicationManager {
     }
 
     public ApplicationMode getApplicationMode() {
-        return _applicationMode;
+        return _application.getMode();
     }
 }
