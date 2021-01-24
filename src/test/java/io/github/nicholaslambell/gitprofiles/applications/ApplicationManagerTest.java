@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ApplicationManagerTest {
     //region Mode Detection
     @Test
-    void testForcedTerminal() {
+    public void testForcedTerminal() {
         String[] args = { "terminal" };
         ApplicationManager applicationManager = new ApplicationManager(args);
 
@@ -16,7 +16,7 @@ class ApplicationManagerTest {
     }
 
     @Test
-    void testForcedInterface() {
+    public void testForcedInterface() {
         String[] args = { "interface" };
         ApplicationManager applicationManager = new ApplicationManager(args);
 
@@ -24,7 +24,7 @@ class ApplicationManagerTest {
     }
 
     @Test
-    void testDetectedTerminal() {
+    public void testDetectedTerminal() {
         String[] args = { "use", "example" };
         ApplicationManager applicationManager = new ApplicationManager(args);
 
@@ -32,7 +32,7 @@ class ApplicationManagerTest {
     }
 
     @Test
-    void testDetectedInterface() {
+    public void testDetectedInterface() {
         String[] args = {};
         ApplicationManager applicationManager = new ApplicationManager(args);
 
