@@ -18,6 +18,10 @@ public class VCSManager {
         return _vcsIntegration.getDirectory().toPath();
     }
 
+    public boolean propertyExists(String key) {
+        return _vcsIntegration.propertyExists(key);
+    }
+
     public String getProperty(String key) {
         return _vcsIntegration.getProperty(key);
     }
@@ -27,6 +31,6 @@ public class VCSManager {
     }
 
     public boolean isPropertyOverridden(String key) {
-        return _vcsIntegration.getLocalProperty(key) != null;
+        return _vcsIntegration.isLocalProperty(key);
     }
 }

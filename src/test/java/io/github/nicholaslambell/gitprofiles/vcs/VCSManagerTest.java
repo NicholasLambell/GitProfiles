@@ -44,6 +44,20 @@ public class VCSManagerTest {
     }
 
     @Test
+    public void testPropertyExistsTrue() {
+        when(_vcsIntegration.propertyExists(_testPropertyKey)).thenReturn(true);
+
+        assertTrue(_vcsManager.propertyExists(_testPropertyKey));
+    }
+
+    @Test
+    public void testPropertyExistsFalse() {
+        when(_vcsIntegration.propertyExists(_testPropertyKey)).thenReturn(false);
+
+        assertFalse(_vcsManager.propertyExists(_testPropertyKey));
+    }
+
+    @Test
     public void testGetProperty() {
 
         when(_vcsIntegration.getProperty(_testPropertyKey)).thenReturn(_testPropertyValue);
@@ -60,14 +74,14 @@ public class VCSManagerTest {
 
     @Test
     public void testIsPropertyOverriddenTrue() {
-        when(_vcsIntegration.getLocalProperty(_testPropertyKey)).thenReturn(_testPropertyValue);
+        when(_vcsIntegration.isLocalProperty(_testPropertyKey)).thenReturn(true);
 
         assertTrue(_vcsManager.isPropertyOverridden(_testPropertyKey));
     }
 
     @Test
     public void testIsPropertyOverriddenFalse() {
-        when(_vcsIntegration.getLocalProperty(_testPropertyKey)).thenReturn(null);
+        when(_vcsIntegration.isLocalProperty(_testPropertyKey)).thenReturn(false);
 
         assertFalse(_vcsManager.isPropertyOverridden(_testPropertyKey));
     }
