@@ -2,7 +2,7 @@
   <configuration default="false" name="Run Interface" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="io.github.nicholaslambell.gitprofiles.GitProfiles" />
     <module name="GitProfiles" />
-    <option name="PROGRAM_PARAMETERS" value="interface" />
+    <option name="PROGRAM_PARAMETERS" value="--mode=interface" />
     <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     <method v="2">
       <option name="Make" enabled="true" />
