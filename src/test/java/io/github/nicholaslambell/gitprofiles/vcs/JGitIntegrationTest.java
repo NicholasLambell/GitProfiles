@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class JGitIntegrationTest {
     @TempDir
-    File testDirectory;
+    public File testDirectory;
 
     private final String _testPropertyKeyInvalid = "testing.property";
     private final String _testPropertyKey = "user.name";

@@ -12,7 +12,7 @@ import static org.mockito.Mockito.when;
 
 public class VCSManagerTest {
     @TempDir
-    File testDirectory;
+    public File testDirectory;
 
     private final String _testPropertyKey = "user.name";
     private final String _testPropertyValue = "Example";

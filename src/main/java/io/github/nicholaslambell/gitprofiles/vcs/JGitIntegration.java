@@ -9,8 +9,8 @@ import java.io.IOException;
 import java.util.Set;
 
 public class JGitIntegration implements IVCSIntegration {
-    Repository _repository;
-    StoredConfig _configuration;
+    private final Repository _repository;
+    private final StoredConfig _configuration;
 
     public JGitIntegration(File directory) throws IOException {
         _repository = new FileRepositoryBuilder()
